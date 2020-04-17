@@ -1,0 +1,441 @@
+
+<h1> ROW </h1>
+<!--
+<h1>  {{ rows  }}</h1> <br>
+-->
+
+<!-- Secccion para desplegar los archiuvos cargados -->
+
+<!--
+{% for row, value  in rows.items %}
+    <h1> <row></row>  {{ row }} {{ value  }}</h1> <br>
+{% endfor %}
+-->
+        <h1> Inicia  [fncBuildTopNavBar]</h1>
+<!-- Inicia  [fncBuildTopNavBar] -->
+
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">
+                    Sistema de Recepción de Productos de Nómina</span>
+                </li>
+              <li class="dropdown">
+
+                    <a id="buttonLockScreen" class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-lock"></i>
+                        <span id="num-msgs" class="label label-primary"></span>
+                    </a>
+
+
+                </li>
+
+
+                <li class="dropdown">
+<!--
+                    <a id="enc-num-msgs" class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>
+                        <span id="num-msgs" class="label label-primary"></span>
+                    </a>
+-->
+
+                </li>
+
+
+             <!-- SIGN OUT -->
+      <li class="xn-icon-button pull-right">
+        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Salir</a>
+      </li>
+      <!-- END SIGN OUT -->
+
+            </ul>
+
+        </nav>
+        </div><h1> Fin  [fncBuildTopNavBar]</h1>
+<!-- Fin  [fncBuildTopNavBar] -->
+        
+  <h1> Inicia ROW [fncBuildRow1CargaPdcto]</h1>
+<!-- Inicia ROW [fncBuildRow1CargaPdcto] -->
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+
+                    <ol class="breadcrumb">
+                        <li>
+                          <!--
+                            <a href="#">Quincena 09 </a>
+                           -->
+                        </li>
+                        <li>
+                            <a href="#"> Mexico</a>
+                        </li>
+                        <li class="active">
+                            <strong>Recepción de Productos  Nomina Federal</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    <input id="ban_envio_remesa" type="text" class="form-control hidden" value="validacion">
+    <input id="ban_calculo_remesa" type="text" class="form-control hidden" value="0">
+
+   <div class="wrapper wrapper-content animated fadeInRight" id="main_page" style="
+    padding-top: 10px;">
+
+
+
+        <div class="row" id="header_proceso_remesa">
+              <h1> Inicia [construyePanelMain]</h1>
+<!-- Inicio [construyePanelMain] -->
+
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                            <span class="label label-success-ssa pull-right">Productos</span>
+                                <h5>Selecciona </h5>
+                            </div>
+                            <div class="ibox-content" style=" text-align:center;vertical-align:middle ; padding-bottom:10px;padding-top: 10px;">
+
+
+
+
+
+                                <button class="btn btn-primary " type="file"
+                                    id="SelectArchivoProducto">
+                                  <i class="fa fa-cloud-upload fa-3x">
+                                  </i>&nbsp; &nbsp; &nbsp; Archivo
+                                  </button>
+<form enctype="multipart/form-data" method="post" name="fileinfo">
+
+                                  <input id="SelectArchivoProductoBase"  name="SelectArchivoProductoBase" type="file" multiple=""  style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"
+                                  onchange="makeFileList();">
+
+
+  <input id="Enviar" type="submit" value="Stash the file!" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"/>
+</form>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-3">
+
+
+                                            <div class="ibox-content">
+
+                                            <!-- inicia gradico -->
+
+                                              <div id="canvas-holder " style="width:65%" >
+                                                <canvas id="chart-area"></canvas>
+                                              </div>
+
+                                            <!-- fin gradico -->
+                                            </div>
+
+                    </div>
+
+
+                <div class="col-lg-3">
+
+                        <div class="ibox float-e-margins">
+
+<!--
+                            <div class="ibox-title">
+
+                                <span class="label label-warning2-light pull-right">Envío</span>
+                                <h5>Quincena</h5>
+
+                            </div>
+-->
+
+                            <div class="ibox-content">
+                                <div class="form-group">
+<!--
+                                                <div class="col-lg-12">
+-->
+                                                                <div class="widget style1 yellw-bg">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-4">
+                                                                            <i class="fa fa-calendar fa-4x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-8 text-right">
+                                                                            <span>Procesando Quincena </span>
+                                                                            <h2 class="font-bold">2020 / 09</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+<!--
+                                                </div>
+-->
+                                  </div> <!-- fin form-group -->
+
+                           </div><!-- ibox-content -->
+
+
+
+       </div>
+
+
+
+
+
+
+                </div> <!-- fin de col-lg-3\ -->
+
+
+
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <span class="label label-success pull-right">En proceso</span>
+                                <h5>Archivos</h5>
+                            </div>
+                            <div class="ibox-content">
+
+<div class="row">
+                            <div class="col-md-6">
+ <h1 id="num_archivos_remesa" class="no-margins"
+          style="padding-left: 20px;">0</h1>
+
+                                <div class="stat-percent font-bold text-info"> </div>
+                                <small>En proceso</small>
+                            </div>
+                            <div id="div_enviar_remesa" class="col-md-6 " style="text-align: center;padding-right: 0px;">
+                                <button  id="enviar_remesa" class="pull-right btn btn-primary dim btn-dim center-block hide" type="button">
+                                <i class="fa fa-paper-plane-o fa-2x"></i> Enviar</button>
+
+                                <div class="font-bold text-navy">  </div>
+                            </div>
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Fin [construyePanelMain] -->
+ <br> <h1> Fin [construyePanelMain]</h1>
+        </div>
+
+    <div class="row">
+
+
+
+            <h1> Inicia [contruyeTablaArchivos]</h1>
+<!-- Inicio [contruyeTablaArchivos] -->
+
+
+<div class="row" id="tabla_remesa">
+
+                    <div class="col-lg-12">
+
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title"  style="    padding-top: 5px;">
+                              <!--
+                                <h5>Quincena Proceso 09 </h5>
+                               -->
+
+                              <div class="pull-left">
+                                   <i class="material-icons md-36">
+                                              sort
+                                  </i>
+
+
+
+
+                             </div>
+                                <div class="pull-right">
+                           Fecha Limite 07-05-2020
+
+                             </div>
+                        </div>
+
+
+                <div class="ibox-content">
+                         <div class="row">
+
+                           <div id="tablamain" class="col-lg-12">
+<!--
+  <table class="table table-hover">
+       <tbody>
+-->
+
+
+
+
+            <script>
+              $(function(){
+                $("#enviar_remesa").addClass('hide');
+
+
+              });
+     </script>
+
+
+<table class="table table-hover"  id="tabla_pn"  >
+                <tbody id="tabla_pn"> </tbody>
+                                </table><script> console.log('ContadorProductosError >0< Contador >0< <br>'); </script>
+  <!--                                   </tbody>
+                                </table>
+-->
+                                </div>
+
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- INICIO DEL MODAL -->
+<div class="modal inmodal" id="mostrarmodal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog" style="width: 800px;    margin-top: 50px;">
+                                    <div class="modal-content animated fadeInLeftBig">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 id="modal_titulo" class="modal-title">Si desea descargar el archivo en excel presione descargar</h4>
+                                            <small class="font-bold">    </small>
+                                        </div>
+                                        <div class="modal-body">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">No</button>
+                                            <button type="button" class="btn btn-primary" id="redireccionar">Descargar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                     </div><!--FIN DEL MODAL -->
+
+
+
+
+
+
+<div class="modal inmodal" id="mostrarmodal1" tabindex="-1" role="dialog" aria-hidden="true">
+                     <div class="modal-dialog" style="width: 800px;    margin-top: 50px;">
+                                    <div class="modal-content animated fadeInLeftBig">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                             <h4 id="modal_titulo" class="modal-title">Tu eres importarte, por favor califica el sistema </h4>
+
+
+<div id="valida">
+<script type="text/JavaScript">
+$(document).ready(function (){
+  $('#ratingdiv .undone').click(function(){
+    var div = "#ratingdiv";
+    var postdata = "rate=" + $(this).attr('rel') ;
+    $.ajax({
+      type: "POST",
+      url: "rate.php",
+      data: postdata,
+      success:
+      function(msg){
+        $(div).html(msg);
+      }
+    });
+  });
+
+
+});
+</script>
+                                            <style>
+#ratingdiv{overflow:hidden}
+#ratingdiv .undone,#ratingdiv .fade{
+background:url("../images/star.gif") -30px 0 no-repeat;
+width:28px;
+display:block;
+height:30px;
+float:left;
+margin-right:15px;
+text-indent:-99999px
+}
+#ratingdiv .done{
+background:url("../images/star.gif") no-repeat;
+width:28px;
+display:block;
+height:30px;
+float:left;
+margin-right:15px;
+text-indent:-99999px
+}
+#ratingdiv .undone:hover{background-position:0;}
+                     </style>
+<div id="ratingdiv">
+    <a href="#" class="undone" rel="1" alt="1" title=" muy malo">star one</a>
+    <a href="#" class="undone" rel="2" title="malo">star two</a>
+    <a href="#" class="undone" rel="3" title="regular">star three</a>
+    <a href="#" class="undone" rel="4" title="bueno">star four</a>
+    <a href="#" class="undone" rel="5" title="excelente">star five</a>
+</div>
+</div>
+                                            <small class="font-bold">    </small>
+                                        </div>
+                                        <div class="modal-body">
+                                        </div>
+                                        <div class="modal-footer">
+                                    <!--        <button type="button" class="btn btn-white" data-dismiss="modal">omitir</button>-->
+                                            <a href="ptfma_validacion.php?type=omitir"><button name='asd' class="btn btn-white" >Omitir</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                     </div><!--FIN DEL MODAL -->
+
+
+
+
+<div id="output" style="visibility:hidden"></div>
+<ul id="fileList" style="visibility:hidden"><li>No Files Selected</li></ul>
+
+
+<!-- Fin [contruyeTablaArchivos] -->
+ <h1> Fin [contruyeTablaArchivos]</h1>
+
+
+
+
+   <!-- SECCION DE RESULTADOS -->
+<!--
+        <div id="resultados"  class="wrapper wrapper-content animated fadeInRight">
+-->
+
+                <div class="col-lg-12" id="x00"  style=" text-align:center;vertical-align:middle">
+                <div>
+<!--
+                    <button class="btn btn-primary btn-lg" type="button"
+                          id="EnviarRemesa">
+                    <i class="fa fa-upload"></i>&nbsp;Enviar Archivos</button>
+
+-->
+                </div>
+                </div>
+
+
+<!--
+        </div>
+-->
+    <!-- FIN SECCION DE RESULTADOS -->
+
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Finaliza ROW [fncBuildRow1CargaPdcto] -->
+<h1> Fin ROW [fncBuildRow1CargaPdcto]</h1>
+
+
+<!-- Fin Secccion para desplegar los archiuvos cargados -->
